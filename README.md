@@ -1,4 +1,26 @@
 # HeartGame
+In the Hearts game, the start player plays a card. This is called the lead card. Each player will take turn
+to play another card. Here are the game rules. 
+
+Rule 1: each player must play a card of the same suit as
+the lead card, unless the player has no card of the same suit. In that case, he/she is allowed to play any
+card. We call such a case a “discard” of a card in a different suit. 
+
+Rule 2: the player playing the highest
+card of the same suit as the lead card will “win” all 4 cards played in the round. A card of a different suit
+than the lead card always loses, even if it is an A. For example, if the lead card is 2, the card A will
+still lose to it. 
+
+Rule 3: the winner of a round will be the start player in the next round.
+
+The scoring rule in Hearts is unconventional. A player winning a card of  will be given one point. A
+player “winning” the very special card of Q will be given 13 points. So after a hand is played, a total of
+26 points would normally be given for all players. There is one single and very important exception. If a
+particular player wins all 13  cards and also the Q, then he/she will be the big winner and all the
+other three players will be given 26 points instead (so there is a total of 78 points given out). The player
+with the least number of points will be the champion after the game is played the pre-determined
+number of times.
+
 In this program, the parent will act like the table for holding the cards, as well as the arbitrator to tell
 each child what card(s) have been played. A child will play a card by sending its card via a pipe to the
 parent, who will then relay the cards played in the round to the next child via a pipe for its consideration.
